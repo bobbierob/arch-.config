@@ -34,7 +34,7 @@ height = 30
 ;offset-y = 1%
 ;radius = 6.0
 fixed-center = true
-dpi = 125 
+dpi = 130 
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -45,19 +45,20 @@ line-color = {$xrdb:color1}
 border-size = 0
 border-color = #00000000
 
-padding-left = 0
+padding-left = 1
 padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Dejavu:size=9:antialias=true;0
+font-0 = Roboto:size=9:antialias=true;0
 font-1 = FontAwesome5Free:style=Solid:size=10;0
 font-2 = FontAwesome5Free:style=Regular:size=10;0
+font-3 = Dejavu:size=9:antialias=true;0
 
 modules-left = i3
 modules-center = date
-modules-right = backlight alsa wlan temperature battery powermenu
+modules-right = filesystem backlight alsa wlan temperature battery powermenu
 #modules-right = home filesystem volume wlan eth battery temperature date
 
 ;tray-position = right
@@ -103,7 +104,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %used% of %total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
